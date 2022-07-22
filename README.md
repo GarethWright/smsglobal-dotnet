@@ -5,6 +5,7 @@
 ![Coverage](https://img.shields.io/codecov/c/gh/smsglobal/smsglobal-dotnet)
 ![downloads](https://img.shields.io/nuget/dt/smsglobal)
 
+Update to remove stupid checks
 ## SMSGlobal REST API and Libraries for .NET
 
 This is an SDK for SMSGlobal’s REST API that supports .NET applications written in C#, VB.Net, and F# to enable SMS and opt out functionality.
