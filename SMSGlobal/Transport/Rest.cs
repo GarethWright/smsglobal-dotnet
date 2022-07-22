@@ -369,15 +369,15 @@ namespace SMSGlobal.SMS.Transport
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("MAC", credentials);
 
-                // Get latest Nuget Package version.
-                var packageName = "SMSGlobal";
-                var url = $"https://api.nuget.org/v3-flatcontainer/{packageName}/index.json";
-                var httpClient = new HttpClient();
-                var responseNuget = await httpClient.GetAsync(url);
-                var versionsResponse = await responseNuget.Content.ReadAsAsync<VersionsResponse>();
-                var lastVersion = versionsResponse.Versions[^1]; //(length-1)
+                //// Get latest Nuget Package version.
+                //var packageName = "SMSGlobal";
+                //var url = $"https://api.nuget.org/v3-flatcontainer/{packageName}/index.json";
+                //var httpClient = new HttpClient();
+                //var responseNuget = await httpClient.GetAsync(url);
+                //var versionsResponse = await responseNuget.Content.ReadAsAsync<VersionsResponse>();
+                //var lastVersion = versionsResponse.Versions[^1]; //(length-1)
 
-                client.DefaultRequestHeaders.TryAddWithoutValidation("User-Agent", "SMSGlobal-SDK/v2 Version/" + lastVersion + ", DotNet/" + System.Environment.Version + " (" + Environment.OSVersion + ")");
+                //client.DefaultRequestHeaders.TryAddWithoutValidation("User-Agent", "SMSGlobal-SDK/v2 Version/" + lastVersion + ", DotNet/" + System.Environment.Version + " (" + Environment.OSVersion + ")");
 
                 var json = JsonConvert.SerializeObject(payload);
 

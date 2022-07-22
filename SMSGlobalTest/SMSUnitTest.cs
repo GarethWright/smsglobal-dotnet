@@ -10,12 +10,12 @@ namespace SMSGlobalTest
         [TestMethod]
         public async System.Threading.Tasks.Task TestMethodSendSMS()
         {
-            var client = new Client(new Credentials("SMSGLOBAL-API-KEY", "SMSGLOBAL-SECRET-KEY"));
+            var client = new Client(new Credentials("d373f6687ccabe5e9f8ce9020b430d0f", "2e822d60519d3242fe2d0ee347d8632b"));
 
             var response = await client.SMS.SMSSend(new
             {
                 origin = "Test",
-                destination = "DESTINATION-NUMBER",
+                destination = "447583029584",
                 message = "This is a test message"
             });
 
